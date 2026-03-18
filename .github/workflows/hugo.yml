@@ -17,16 +17,33 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.157.0
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
           fetch-depth: 0
-      - uses: peaceiris/actions-hugo@v3
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: latest
-      - run: hugo --minify
-      - uses: actions/upload-pages-artifact@v3
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: Asia/Shanghai
+        run: hugo --gc --minify
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
