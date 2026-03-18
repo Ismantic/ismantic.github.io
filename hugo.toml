@@ -1,0 +1,10 @@
+baseURL = 'https://ismantic-dev.github.io/'
+languageCode = 'en-us'
+title = 'Isma 是语'
+theme = "PaperMod"
+
+[params]
+    author = "Ismantic"
+
+[author]
+    name = "Ismantic"
