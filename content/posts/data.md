@@ -5,4 +5,4 @@ title = '是语百科'
 url = '/3/'
 +++
 
-Will Do It.
+We Will Do It.
