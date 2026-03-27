@@ -5,4 +5,4 @@ title = '是语输入法'
 url = '/2/'
 +++
 
-Segment -> Count -> Construct -> Prune -> Compact -> Interpreter
+Dict -> Segment -> Count -> Construct -> Prune -> Compact -> Interpreter
