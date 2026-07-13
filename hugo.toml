@@ -5,6 +5,8 @@ theme = "PaperMod"
 
 [params]
     author = "Ismantic"
+    hideSummary = true
+    hideAuthor = true
 
 [author]
     name = "Ismantic"
