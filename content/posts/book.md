@@ -5,4 +5,4 @@ title = '是语指北录'
 url = '/1/'
 +++
 
-Unicode -> Regex -> Trie -> Tokenizer -> CRF -> LDA -> W2V -> GPT
+Unicode -> Regex -> Trie -> Tokenizer -> CRF -> LDA -> W2V -> GPT -> Matx
