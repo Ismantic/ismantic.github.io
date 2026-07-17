@@ -10,3 +10,21 @@ theme = "PaperMod"
 
 [author]
     name = "Ismantic"
+
+[[menu.main]]
+    identifier = "text"
+    name = "文本处理"
+    url = "/text/"
+    weight = 10
+
+[[menu.main]]
+    identifier = "matx"
+    name = "编译器"
+    url = "/matx/"
+    weight = 20
+
+[[menu.main]]
+    identifier = "zero"
+    name = "训练引擎"
+    url = "/zero/"
+    weight = 30

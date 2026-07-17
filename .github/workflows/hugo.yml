@@ -1,9 +1,11 @@
-name: Deploy Hugo site to Pages
+name: Deploy site to Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+  repository_dispatch:
+    types: [deploy-books]
 
 permissions:
   contents: read
@@ -20,10 +22,17 @@ jobs:
     env:
       HUGO_VERSION: 0.157.0
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout website
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
+
+      - name: Checkout IsBook
+        uses: actions/checkout@v4
+        with:
+          repository: Ismantic/IsBook
+          path: IsBook
 
       - name: Setup Pages
         id: pages
@@ -35,12 +44,29 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
-      - name: Build with Hugo
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install mdBook
+        run: cargo install mdbook --locked
+
+      - name: Build Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: Asia/Shanghai
         run: hugo --gc --minify
+
+      - name: Build books
+        run: |
+          mdbook build IsBook/Text
+          mdbook build IsBook/Matx
+          mdbook build IsBook/Zero
+
+          rm -rf public/text public/matx public/zero
+          cp -R IsBook/book-text public/text
+          cp -R IsBook/book-matx public/matx
+          cp -R IsBook/book-zero public/zero
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -54,5 +80,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4
