@@ -5,4 +5,5 @@ title = '产品：是语输入法'
 url = '/2/'
 +++
 
-Dict -> Segment -> Count -> Construct -> Prune -> Compact -> Interpreter
+Sime
+
