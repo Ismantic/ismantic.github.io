@@ -1,6 +1,6 @@
 +++
 date = '2026-07-15T09:00:00+08:00'
-draft = false
+draft = true
 title = '低成本实践：训练GPT（三）'
 +++
 
