@@ -106,3 +106,15 @@ Zero Tensor ─────┘
 目前的三本书记录了已经完成的基础，后续工作会尝试让这些基础逐渐汇合。它们共同指向一个问题：如果不依赖现成的 Python 机器学习生态，从文本、训练、语言到硬件，一套语言模型系统应当怎样建立？更重要的问题是，这样做是否真的有价值？
 
 目前我的判断是，接下来可以把更多精力放在 Tensor 编译器上。PyTorch 生态其实还是很健康，另起一个新生态可能意义不大，这些工作更多只是探索。Text、Zero 和 Matx 则更适合作为教学项目，用来展示一套系统在底层如何工作。
+
+## 链接 
+
+三本书都可以免费在线阅读：
+
+- [底层实现：文本处理](https://ismantic.github.io/text/)
+- [底层实现：训练框架](https://ismantic.github.io/zero/)
+- [底层实现：编译器](https://ismantic.github.io/matx/)
+
+书稿集中维护在 [Ismantic/IsBook](https://github.com/Ismantic/IsBook)，配套实现可以查看 [Ismantic/Zero](https://github.com/Ismantic/Zero) 和 [Ismantic/Matx](https://github.com/Ismantic/Matx)。文本处理各章节的配套项目，也都列在对应章节末尾。
+
+如果这些内容对你有所帮助，欢迎在 GitHub 上点一个 Star。对这种偏底层、偏教学的长期项目来说，Star 是一种很直接的反馈：它会让我知道这些内容确实有人需要，也会成为我继续完善三本书、推进 Tensor 编译器和系统连接工作的动力。
