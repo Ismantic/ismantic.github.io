@@ -47,4 +47,4 @@ Sime 比较特别的一点，是训练和运行流程基本都在同一个项目
 
 Sime 还远没有完成，还有很多词典、模型、解码和交互上的问题要继续改。但至少现在，它已经不只是当年辩论里随口举出的一个例子了。
 
-项目地址：[Ismantic/Sime](https://github.com/Ismantic/Sime)
+项目地址：[Ismantic/Sime](https://github.com/Ismantic/Sime) [Ismantic/DictCut](https://github.com/Ismantic/DictCut)
