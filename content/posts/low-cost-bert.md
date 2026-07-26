@@ -77,5 +77,5 @@ BERT 还有一个现实问题：这些字符级任务通常对延迟很敏感。
 - Hugging Face：[BERTc-315M-MT](https://huggingface.co/Ismantic/BERTc-315M-MT)
 - Hugging Face：[BERTc-165M-CSC](https://huggingface.co/Ismantic/BERTc-165M-CSC)
 - Hugging Face：[BERTc-315M-CSC](https://huggingface.co/Ismantic/BERTc-315M-CSC)
-- Hugging Face：[wapic-cws](https://huggingface.co/Ismantic/wapic-cws)
-- Hugging Face：[wapic-cws-data](https://huggingface.co/datasets/Ismantic/wapic-cws-data)
+- Hugging Face：[Wapic-CWS](https://huggingface.co/Ismantic/Wapic-CWS)
+- Hugging Face：[Wapic-CWS-Data](https://huggingface.co/datasets/Ismantic/Wapic-CWS-Data)
