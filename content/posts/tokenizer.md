@@ -1,7 +1,7 @@
 +++
 date = '2026-07-31T09:00:00+08:00'
 draft = false
-title = 'PieceTokenizer: 三个注意点'
+title = 'Tokenizer的三个注意点'
 +++
 
 当前语言模型通常先用 Tokenizer 将文本转换成 Token ID，其中 BPE 是最常见的子词算法。BPE 的原理并不复杂：从字符或字节开始，反复统计相邻符号对，将最高频的一对合成新 Token，直到词表达到指定大小。推理时再按训练得到的顺序重放这些合并。
